@@ -1,0 +1,23 @@
+appId: id.tuya-desktop.app
+productName: Tuya Desktop
+directories:
+  buildResources: build
+  output: dist
+files:
+  - out/**/*
+  - resources/**/*
+  - package.json
+asar: true
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  icon: build/icon.png
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Tuya Desktop
+artifactName: ${productName}-Setup-${version}.${ext}
